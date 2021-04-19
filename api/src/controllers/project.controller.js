@@ -3,7 +3,7 @@ import Project from "../models/Project";
 export async function getProjects(req, res) {
   try {
     const projects = await Project.findAll();
-    res.json({
+    return res.json({
       data: projects,
     });
   } catch (error) {
