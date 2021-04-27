@@ -1,7 +1,7 @@
 import { Route } from "react-router-dom";
 import {Hello} from '../hello/hello';
 import {GlobalStyle} from './GlobalStyle'
-import { Landing } from "../Landing/index.jsx";
+import { Landing } from "../Landing/index";
 
 function App() {
   return( 

@@ -2,14 +2,20 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios'
 
 export const Hello = () =>{
-const [initialState, setInitialState] = useState([])
+    interface ProjectData{
+        id: string,
+        name: string,
+        description:string,
+        deliverydate: Date,
+    }
+const [initialState, setInitialState] = useState<ProjectData[]>([])
 
 useEffect(() => {
     axios.get('/api/projects').then(res => {
         if(res){
             return res
         }
-    }).then(jsonResponse => setInitialState(jsonResponse.data.data))
+    }).then(jsonResponse => setInitialState(jsonResponse!.data.data))
 }, [])
 console.log(initialState)
 return(<div>{
