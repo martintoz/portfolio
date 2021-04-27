@@ -6,7 +6,7 @@ export const Hello = () =>{
         id: string,
         name: string,
         description:string,
-        deliverydate: Date,
+       date: Date,
     }
 const [initialState, setInitialState] = useState<ProjectData[]>([])
 
