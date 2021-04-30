@@ -1,7 +1,12 @@
 import styled from "styled-components";
 
 export const StyledLanding = styled.div`
-    .landingName{
-        font-size:10em;
-    }
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content:space-around;
+  min-height:100vh;
+  .landingName {
+    font-size: 10em;
+  }
 `;

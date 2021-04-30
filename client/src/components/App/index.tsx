@@ -1,14 +1,14 @@
-import { Route } from "react-router-dom";
-import {Hello} from '../hello/hello';
+// import { Route } from "react-router-dom";
+import {Projects} from '../Projects';
 import {GlobalStyle} from './GlobalStyle'
-import { Landing } from "../Landing/index";
+import { Landing } from "../Landing";
 
 function App() {
   return( 
   <div className="App">
     <GlobalStyle/>
-    <Route exact path='/' component={Landing}/>
-    <Route path='/hello' component={Hello}/>
+    <Landing />
+    <Projects />
   </div>);
 }
 

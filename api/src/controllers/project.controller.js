@@ -45,16 +45,19 @@ export async function deleteProject(req, res) {
 }
 
 export async function createProject(req, res) {
-  const { name, description, date } = req.body;
+  const { name, description, date, github, deploy, photo } = req.body;
   try {
     let newProject = await Project.create(
       {
         name,
         description,
         date,
+        github,
+        deploy,
+        photo,
       },
       {
-        fields: ["name", "description", "date"],
+        fields: ["name", "description", "date", "github", "deploy", "photo"],
       }
     );
     if (newProject) {
@@ -74,10 +77,18 @@ export async function createProject(req, res) {
 
 export async function updateProject(req, res) {
   const { id } = req.params;
-  const { name, description, date } = req.body;
+  const { name, description, date, github, deploy, photo } = req.body;
   try {
     const projects = await Project.findAll({
-      attributes: ["id", "name", "description", "date"],
+      attributes: [
+        "id",
+        "name",
+        "description",
+        "date",
+        "github",
+        "deploy",
+        "photo",
+      ],
       where: {
         id,
       },
@@ -89,6 +100,9 @@ export async function updateProject(req, res) {
           name,
           description,
           date,
+          github,
+          deploy,
+          photo,
         });
       });
     }

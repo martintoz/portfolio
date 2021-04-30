@@ -6,13 +6,27 @@ export const Social = () => {
     <StyledSocial>
       <ul>
         <li>
-          <i className="fab fa-github"></i>
+          <a
+            href="https://github.com/martintoz"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-github"></i>
+          </a>
         </li>
         <li>
-          <i className="fab fa-linkedin"></i>
+          <a
+            href="https://www.linkedin.com/in/martintoz/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-linkedin-in"></i>
+          </a>
         </li>
         <li>
-          <i className="fas fa-envelope"></i>
+          <a href="mailto:martintoz@gmail.com" rel="noopener noreferrer" target="_blank">
+            <i className="fas fa-envelope"></i>
+          </a>
         </li>
       </ul>
     </StyledSocial>
