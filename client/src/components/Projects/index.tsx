@@ -27,12 +27,13 @@ export const Projects = () => {
 
   return (
     <StyledProjects id="projects">
+      <h2>Projects</h2>
       <ul>
         {initialState.length > 0 &&
           initialState.map((e) => (
             <li key={e.id}>
-              <div>
-                <h2>{e.name}</h2>
+              <div className="projectText">
+                <h3>{e.name}</h3>
                 <div>{e.description}</div>
                 <div className="links">
                   {e.github && (
@@ -59,13 +60,15 @@ export const Projects = () => {
                   )}
                 </div>
               </div>
-              <a
-                href={e.deploy || e.github}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src={e.photo} alt={e.name} />
-              </a>
+              <div className="projectPhoto">
+                <a
+                  href={e.deploy || e.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={e.photo} alt={e.name} />
+                </a>
+              </div>
             </li>
           ))}
       </ul>

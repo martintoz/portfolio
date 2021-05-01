@@ -7,7 +7,7 @@ export const Landing = () => {
   return (
     <StyledLanding>
       <h1 className="landingName">Martín Tozer</h1>
-      <ul>
+      <ul className="index">
         <li>
           <HashLink smooth to="#aboutMe">
             <h2>About Me</h2>

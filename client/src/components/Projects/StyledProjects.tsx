@@ -2,31 +2,43 @@ import styled from "styled-components";
 import { whiteMain } from "../App/GlobalStyle";
 
 export const StyledProjects = styled.div`
+  margin: 3vw;
   ul {
-    margin:3vw;
     li {
       border: ${whiteMain} solid 1px;
       display: grid;
       grid-template-rows: auto;
       grid-template-columns: 3fr 2fr;
-      padding:2vw;
-      margin-bottom:3vh;
-      img {
-        width: 100%;
+      grid-gap: 2vw;
+      padding: 2vw;
+      margin-bottom: 3vh;
+      .projectPhoto {
+        overflow: hidden;
+        img {
+          width: 100%;
+          &:hover {
+            transform: scale(1.1);
+            transition: transform 0.35s ease;
+          }
+        }
       }
-      .links {
-        display:flex;
-        gap:1vw;
-        i {
-          font-size: 1.75em;
+      .projectText {
+        .links {
+          display: flex;
+          gap: 1vw;
+          i {
+            font-size: 1.75em;
+          }
         }
       }
       &:nth-child(even) {
         grid-template-columns: 2fr 3fr;
-        img {
-          order: 1;
+        .projectPhoto {
+          img {
+            order: 1;
+          }
         }
-        div {
+        .projectText {
           order: 2;
         }
       }
