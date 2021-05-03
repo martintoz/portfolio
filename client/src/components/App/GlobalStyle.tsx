@@ -26,9 +26,11 @@ body{
     text-decoration:none;
     cursor: pointer;
   }
-  i:hover {
+  i{
+    transition: all 0.3s ease;
+    &:hover {
       color: ${redLight};
-      transition: all 0.3s ease;
+    }
   }
 }
 `;

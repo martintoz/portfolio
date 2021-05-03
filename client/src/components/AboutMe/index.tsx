@@ -40,8 +40,8 @@ export const AboutMe = () => {
           Freelance translator for 10 years.
         </li>
       </ul>
-      <h5>Skills</h5>
-      <ul>
+      <h3>Skills</h3>
+      <ul className="skills">
         {skills.map((e, i) => (
           <li key={i}>
             {e}

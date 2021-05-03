@@ -6,7 +6,10 @@ import { StyledLanding } from "./StyledLanding";
 export const Landing = () => {
   return (
     <StyledLanding>
-      <h1 className="landingName">Martín Tozer</h1>
+      <div className="landingName">
+        <h1>Martín Tozer</h1>
+        <h2>Frontend Developer</h2>
+      </div>
       <ul className="index">
         <li>
           <HashLink smooth to="#aboutMe">

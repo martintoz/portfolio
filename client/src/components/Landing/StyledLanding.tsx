@@ -7,19 +7,24 @@ export const StyledLanding = styled.div`
   justify-content: space-around;
   min-height: 100vh;
   .landingName {
-    font-size: 10em;
-  }
-  .index{
     display:flex;
     flex-direction:column;
-    width:10vw;
-    li{
-      padding-left:0;
-      text-align:left;
-      width:100%;
-        transition: all 0.35s ease;
-      &:hover{
-        padding-left:3vw;
+    align-items:center;
+    h1 {
+      font-size: 10em;
+    }
+  }
+  .index {
+    display: flex;
+    flex-direction: column;
+    width: 10vw;
+    li {
+      padding-left: 0;
+      text-align: left;
+      width: 100%;
+      transition: all 0.35s ease;
+      &:hover {
+        padding-left: 3vw;
       }
     }
   }

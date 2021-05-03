@@ -2,7 +2,9 @@ import Project from "../models/Project";
 
 export async function getProjects(req, res) {
   try {
-    const projects = await Project.findAll();
+    const projects = await Project.findAll({
+      order: [["date", "DESC"]],
+    });
     return res.json({
       data: projects,
     });

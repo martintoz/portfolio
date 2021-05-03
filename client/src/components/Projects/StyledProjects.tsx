@@ -16,9 +16,9 @@ export const StyledProjects = styled.div`
         overflow: hidden;
         img {
           width: 100%;
+          transition: transform 0.35s ease;
           &:hover {
             transform: scale(1.1);
-            transition: transform 0.35s ease;
           }
         }
       }
