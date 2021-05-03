@@ -28,11 +28,18 @@ export const AboutMe = () => {
       <h2>About me</h2>
       <ul>
         <li>
-          🚀 Frontend Developer, soyHenry.com graduate with more than 800
-          training hours.
+          🚀 Frontend Developer,{" "}
+          <a
+            href="https://soyhenry.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            soyHenry.com
+          </a>{" "}
+          graduate with more than 800 training hours.
         </li>
         <li>
-          📖 Bilingual in Spanish and English and graduated from UADE with a
+          📖 Bilingual in Spanish and English. Graduated from UADE with a
           bachelor's degree in Advertising.
         </li>
         <li>
@@ -43,11 +50,18 @@ export const AboutMe = () => {
       <h3>Skills</h3>
       <ul className="skills">
         {skills.map((e, i) => (
-          <li key={i}>
-            {e}
-          </li>
+          <li key={i}>{e}</li>
         ))}
       </ul>
+
+      <a
+        href="./MartinTozer_Resume_FE.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        download
+      >
+        <button>Download Resume</button>
+      </a>
     </StyledAboutMe>
   );
 };

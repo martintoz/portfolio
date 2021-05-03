@@ -24,12 +24,28 @@ body{
   }
   a{
     text-decoration:none;
+    font-weight:bold;
     cursor: pointer;
+    &:hover {
+      color: white;
+    }
   }
   i{
     transition: all 0.3s ease;
     &:hover {
       color: ${redLight};
+    }
+  }
+  button{
+    display:inline-block;
+    padding:10px;
+    border: ${whiteMain} solid 1px;
+    background-color:${blackMain};
+    transition: all 0.3s ease;
+    border-radius:3px;
+    &:hover{
+      background-color:${whiteMain};
+      color:${blackMain};
     }
   }
 }

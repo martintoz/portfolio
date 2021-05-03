@@ -1,4 +1,4 @@
-// import { Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 import {Projects} from '../Projects';
 import {GlobalStyle} from './GlobalStyle'
 import { Landing } from "../Landing";
