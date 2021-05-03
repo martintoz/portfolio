@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Parser from 'html-react-parser';
 import { StyledProjects } from "./StyledProjects";
 import axios from "axios";
 
@@ -22,7 +23,10 @@ export const Projects = () => {
           return res;
         }
       })
-      .then((jsonResponse) => setInitialState(jsonResponse!.data.data));
+      .then((jsonResponse) => {
+        setInitialState(jsonResponse!.data.data);
+      });
+      
   }, []);
 
   return (
@@ -30,11 +34,25 @@ export const Projects = () => {
       <h2>Projects</h2>
       <ul>
         {initialState.length > 0 &&
-          initialState.map((e) => (
+          initialState.map((e) => {
+            let newDescription:any
+            if(e.description.includes("soyHenry.com")){
+              newDescription = e.description.split("soyHenry.com")
+              newDescription = newDescription[0] + `<a
+              href="https://soyhenry.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              soyHenry.com
+            </a>` + newDescription[1]
+            }
+            return (
             <li key={e.id}>
               <div className="projectText">
                 <h3>{e.name}</h3>
-                <div>{e.description}</div>
+                <div className="projectDescription">
+                  { newDescription && newDescription.length? Parser(newDescription) : e.description}
+                </div>
                 <div className="links">
                   {e.github && (
                     <div>
@@ -70,7 +88,7 @@ export const Projects = () => {
                 </a>
               </div>
             </li>
-          ))}
+          )})}
       </ul>
     </StyledProjects>
   );
