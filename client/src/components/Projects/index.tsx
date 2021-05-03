@@ -24,7 +24,7 @@ export const Projects = () => {
       })
       .then((jsonResponse) => setInitialState(jsonResponse!.data.data));
   }, []);
-console.log("initialState", initialState)
+
   return (
     <StyledProjects id="projects">
       <h2>Projects</h2>

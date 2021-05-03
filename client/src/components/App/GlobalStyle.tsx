@@ -17,6 +17,12 @@ body{
   h1{
     font-family:'Fredoka One', sans-serif;
   }
+  h2{
+    padding-bottom:2vh;
+  }
+  h3{
+    padding-bottom:1vh;
+  }
   ul{
     list-style-type:none;
     margin-block:0;

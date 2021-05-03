@@ -47,13 +47,14 @@ export const AboutMe = () => {
           Freelance translator for 10 years.
         </li>
       </ul>
+      <div className="skills">
       <h3>Skills</h3>
-      <ul className="skills">
+      <ul>
         {skills.map((e, i) => (
           <li key={i}>{e}</li>
         ))}
       </ul>
-
+      </div>
       <a
         href="./MartinTozer_Resume_FE.pdf"
         target="_blank"
