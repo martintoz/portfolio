@@ -24,6 +24,7 @@ export const StyledProjects = styled.div`
       }
       .projectText {
         .links {
+          padding:1vh 0;
           display: flex;
           gap: 1vw;
           i {
