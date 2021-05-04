@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
 import { Social } from "../Social";
+import { MartinTozer } from "./martinTozer";
 import { StyledLanding } from "./StyledLanding";
 
+
 export const Landing = () => {
+
+  useEffect(() => {
+    const logo:NodeListOf<SVGPathElement> = document.querySelectorAll("#logoMT path")
+    for (let i = 0; i < logo.length; i++) {
+      console.log(`Letter ${i} is ${logo[i].getTotalLength()}`)
+      
+    }
+  },[])
+
   return (
     <StyledLanding>
       <div className="landingName">
-        <h1>Martín Tozer</h1>
+        <MartinTozer />
         <h2>Frontend Developer</h2>
       </div>
       <ul className="index">
