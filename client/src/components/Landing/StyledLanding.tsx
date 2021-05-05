@@ -17,6 +17,7 @@ export const StyledLanding = styled.div`
     }
     #logoMT {
       animation: fill 0.5s ease forwards 2s;
+      width:70vw;
 
       path:nth-child(1) {
         stroke-dasharray: 974px;

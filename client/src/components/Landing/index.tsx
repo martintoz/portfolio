@@ -7,14 +7,6 @@ import { StyledLanding } from "./StyledLanding";
 
 export const Landing = () => {
 
-  useEffect(() => {
-    const logo:NodeListOf<SVGPathElement> = document.querySelectorAll("#logoMT path")
-    for (let i = 0; i < logo.length; i++) {
-      console.log(`Letter ${i} is ${logo[i].getTotalLength()}`)
-      
-    }
-  },[])
-
   return (
     <StyledLanding>
       <div className="landingName">

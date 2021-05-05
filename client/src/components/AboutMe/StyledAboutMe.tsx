@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StyledAboutMe = styled.div`
 margin: 3vw;
+
 .skills{
 	padding: 3vw 0;
 	ul{
