@@ -14,7 +14,7 @@ export const StyledProjects = styled.div`
       padding: 2vw;
       margin-bottom: 3vh;
       .projectPhoto {
-        grid-area:projectPhoto;
+        grid-area: projectPhoto;
         overflow: hidden;
         img {
           width: 100%;
@@ -25,12 +25,12 @@ export const StyledProjects = styled.div`
         }
       }
       .projectText {
-        grid-area:projectText;
-        display:flex;
-        flex-direction:column;
-        justify-content: space-around ;
+        grid-area: projectText;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
         .links {
-          padding:1vh 0;
+          padding: 1vh 0;
           display: flex;
           gap: 1vw;
           i {
@@ -50,6 +50,27 @@ export const StyledProjects = styled.div`
           order: 2;
         }
       } */
+    }
+  }
+  @media (max-width: 858px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    ul{
+      li{
+        .projectText{
+          gap:10px;
+          align-items:center;
+          .links{
+            gap: 5vw;
+          }
+        }
+        grid-template-rows: auto;
+      grid-template-columns: auto;
+      grid-template-areas: "projectText" "projectPhoto";
+      row-gap:15px;
+      text-align:justify;
+      }
     }
   }
 `;

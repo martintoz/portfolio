@@ -13,7 +13,7 @@ export const StyledLanding = styled.div`
     flex-direction: column;
     align-items: center;
     h1 {
-      opacity:0;
+      opacity: 0;
       animation: fadeIn 1.5s forwards 2s;
     }
     @keyframes fadeIn {
@@ -98,14 +98,13 @@ export const StyledLanding = styled.div`
   .index {
     display: flex;
     flex-direction: column;
-    width: 10vw;
     li {
       padding-left: 0;
       text-align: center;
       width: 100%;
       transition: all 0.35s ease;
       &:hover {
-        transform:scale(1.2)
+        transform: scale(1.2);
       }
     }
   }
@@ -121,4 +120,12 @@ export const StyledLanding = styled.div`
       }
     }
   } */
+  @media (max-width: 858px) {
+    .landingName {
+      #logoMT {
+        width: 90vw;
+        margin-bottom:-5vh;
+      }
+    }
+  }
 `;

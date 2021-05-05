@@ -27,7 +27,7 @@ export const AboutMe = () => {
     <StyledAboutMe id="aboutMe">
       <div className="parallax">
         <h2>About me</h2>
-        <ul>
+        <ul className="bio">
           <li>
             🚀 Frontend Developer,{" "}
             <a

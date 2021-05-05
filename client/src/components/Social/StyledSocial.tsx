@@ -7,4 +7,9 @@ export const StyledSocial = styled.div`
     justify-content: center;
     gap: 2vw;
   }
+  @media (max-width: 858px){
+    ul{
+      gap:5vw;
+    }
+  }
 `;
