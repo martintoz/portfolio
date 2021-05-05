@@ -8,15 +8,12 @@ export const redDark = "#c4001d";
 
 export const GlobalStyle = createGlobalStyle`
 body, *{
-  background-color: ${blackMain};
-  color:${whiteMain};
   font-family: 'Roboto', sans-serif;
   margin:0;}
 body{
+  background-color: ${blackMain};
+  color:${whiteMain};
   cursor: default;
-  h1{
-    font-family:'Fredoka One', sans-serif;
-  }
   h2{
     padding-bottom:2vh;
   }
@@ -30,6 +27,7 @@ body{
   }
   a{
     text-decoration:none;
+    color:${whiteMain};
     font-weight:bold;
     cursor: pointer;
     &:hover {

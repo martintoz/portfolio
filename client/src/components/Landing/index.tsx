@@ -11,7 +11,7 @@ export const Landing = () => {
     <StyledLanding>
       <div className="landingName">
         <MartinTozer />
-        <h2>Frontend Developer</h2>
+        <h1>Frontend Developer</h1>
       </div>
       <ul className="index">
         <li>

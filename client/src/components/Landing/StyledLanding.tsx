@@ -12,7 +12,7 @@ export const StyledLanding = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    h2 {
+    h1 {
       opacity:0;
       animation: fadeIn 1.5s forwards 2s;
     }
@@ -101,11 +101,11 @@ export const StyledLanding = styled.div`
     width: 10vw;
     li {
       padding-left: 0;
-      text-align: left;
+      text-align: center;
       width: 100%;
       transition: all 0.35s ease;
       &:hover {
-        padding-left: 3vw;
+        transform:scale(1.2)
       }
     }
   }

@@ -25,44 +25,46 @@ const skills = [
 export const AboutMe = () => {
   return (
     <StyledAboutMe id="aboutMe">
-      <h2>About me</h2>
-      <ul>
-        <li>
-          🚀 Frontend Developer,{" "}
-          <a
-            href="https://soyhenry.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            soyHenry.com
-          </a>{" "}
-          graduate with more than 800 training hours.
-        </li>
-        <li>
-          📖 Bilingual in Spanish and English. Graduated from UADE with a
-          bachelor's degree in Advertising.
-        </li>
-        <li>
-          💻 9 years of work experience in web design and online communication.
-          Freelance translator for 10 years.
-        </li>
-      </ul>
-      <div className="skills">
-      <h3>Skills</h3>
-      <ul>
-        {skills.map((e, i) => (
-          <li key={i}>{e}</li>
-        ))}
-      </ul>
+      <div className="parallax">
+        <h2>About me</h2>
+        <ul>
+          <li>
+            🚀 Frontend Developer,{" "}
+            <a
+              href="https://soyhenry.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              soyHenry.com
+            </a>{" "}
+            graduate with more than 800 training hours.
+          </li>
+          <li>
+            📖 Bilingual in Spanish and English. Graduated from UADE with a
+            bachelor's degree in Advertising.
+          </li>
+          <li>
+            💻 9 years of work experience in web design and online
+            communication. Freelance translator for 10 years.
+          </li>
+        </ul>
+        <div className="skills">
+          <h3>Skills</h3>
+          <ul>
+            {skills.map((e, i) => (
+              <li key={i}>{e}</li>
+            ))}
+          </ul>
+        </div>
+        <a
+          href="./MartinTozer_Resume_FE.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          download
+        >
+          <button>Download Resume</button>
+        </a>
       </div>
-      <a
-        href="./MartinTozer_Resume_FE.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        download
-      >
-        <button>Download Resume</button>
-      </a>
     </StyledAboutMe>
   );
 };

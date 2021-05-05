@@ -36,16 +36,32 @@ export const Projects = () => {
         {initialState.length > 0 &&
           initialState.map((e) => {
             let newDescription:any
-            if(e.description.includes("soyHenry.com")){
-              newDescription = e.description.split("soyHenry.com")
-              newDescription = newDescription[0] + `<a
-              href="https://soyhenry.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              soyHenry.com
-            </a>` + newDescription[1]
+            if(e.description.includes("http")){
+              const re = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/g
+              const links = [...e.description.matchAll(re)]
+              newDescription = links[0].input
+              links.forEach(e =>{ 
+                let link = e[0]
+                let siteName = link.split("//")[1]
+                newDescription = newDescription.replace(link, `<a
+                  href=${link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                > 
+                  ${siteName}
+                </a>`)
+              })
             }
+            // if(e.description.includes("soyHenry.com")){
+            //   newDescription = e.description.split("soyHenry.com")
+            //   newDescription = newDescription[0] + `<a
+            //   href="https://soyhenry.com/"
+            //   target="_blank"
+            //   rel="noopener noreferrer"
+            // >
+            //   soyHenry.com
+            // </a>` + newDescription[1]
+            // }
             return (
             <li key={e.id}>
               <div className="projectText">
