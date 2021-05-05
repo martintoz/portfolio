@@ -12,12 +12,18 @@ export const StyledLanding = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    h1 {
-      font-size: 10em;
+    h2 {
+      opacity:0;
+      animation: fadeIn 1.5s forwards 2s;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
     #logoMT {
       animation: fill 0.5s ease forwards 2s;
-      width:70vw;
+      width: 70vw;
 
       path:nth-child(1) {
         stroke-dasharray: 974px;
@@ -80,8 +86,8 @@ export const StyledLanding = styled.div`
         }
       }
       @keyframes fill {
-        from{
-          fill:transparent;
+        from {
+          fill: transparent;
         }
         to {
           fill: ${whiteMain};

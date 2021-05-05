@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { HashLink } from "react-router-hash-link";
 import { Social } from "../Social";
 import { MartinTozer } from "./martinTozer";
