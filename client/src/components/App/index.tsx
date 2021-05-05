@@ -2,6 +2,7 @@ import {Projects} from '../Projects';
 import {GlobalStyle} from './GlobalStyle'
 import { Landing } from "../Landing";
 import { AboutMe } from '../AboutMe';
+import { Footer } from '../Footer';
 
 function App() {
   return( 
@@ -10,6 +11,7 @@ function App() {
     <Landing />
     <AboutMe />
     <Projects />
+    <Footer />
   </div>);
 }
 
