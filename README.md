@@ -16,7 +16,3 @@ Want to see my work? [Check out my portfolio](https://tozer.ar)
 [<img src="https://edent.github.io/SuperTinyIcons/images/svg/linkedin.svg" width="25" title="LinkedIn" />](https://www.linkedin.com/in/martintoz/)
 [<img src="https://edent.github.io/SuperTinyIcons/images/svg/gmail.svg" width="25" title="Gmail" />](mailto:martintoz@gmail.com)
 [<img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Globe_icon_squared.svg" width="25" title="Portfolio" />](https://tozer.ar)
-<!-- 
-**martintoz/martintoz** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
