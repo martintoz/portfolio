@@ -1,5 +1,5 @@
 require("dotenv").config();
-import Sequelize from "sequelize";
+const Sequelize = require("sequelize");
 
 const {
   POSTGRES_USER,
@@ -8,7 +8,7 @@ const {
   POSTGRES_HOST,
 } = process.env;
 
-export const sequelize =
+const sequelize =
   process.env.NODE_ENV === "production"
     ? new Sequelize({
         database: POSTGRES_DB,
@@ -36,3 +36,10 @@ export const sequelize =
         `postgres://${POSTGRES_USER}:${POSTGRES_PASS}@${POSTGRES_HOST}/${POSTGRES_DB}`,
         { logging: false, native: false }
       );
+
+      var db = {};
+
+db.sequelize = sequelize;
+db.Sequelize = Sequelize;
+
+module.exports = db;

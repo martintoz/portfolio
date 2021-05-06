@@ -1,5 +1,5 @@
-import Sequelize from 'sequelize';
-import { sequelize } from '../database/database';
+const Sequelize = require('sequelize');
+const { sequelize } = require('../database/database');
 
 const Project = sequelize.define('projects', {
     id: {
@@ -35,4 +35,4 @@ const Project = sequelize.define('projects', {
 // Project.hasMany(Task, {foreignKey: 'projectId', sourceKey: 'id'})
 // Task.belongsTo(Project, {foreignKey:'projectId', sourceKey: 'id' })
 
-export default Project;
+module.exports = Project;

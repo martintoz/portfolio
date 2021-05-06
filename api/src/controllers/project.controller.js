@@ -1,6 +1,6 @@
-import Project from "../models/Project";
-
-export async function getProjects(req, res) {
+const Project = require("../models/Project");
+module.exports = {
+  getProjects: async function (req, res) {
   try {
     const projects = await Project.findAll({
       order: [["date", "DESC"]],
@@ -11,9 +11,9 @@ export async function getProjects(req, res) {
   } catch (error) {
     console.log(error);
   }
-}
+},
 
-export async function getOneProject(req, res) {
+getOneProject: async function (req, res) {
   const { id } = req.params;
   try {
     const project = await Project.findOne({
@@ -27,9 +27,9 @@ export async function getOneProject(req, res) {
   } catch (error) {
     console.log(error);
   }
-}
+},
 
-export async function deleteProject(req, res) {
+deleteProject: async function (req, res) {
   const { id } = req.params;
   try {
     const deleteRowCount = await Project.destroy({
@@ -44,9 +44,9 @@ export async function deleteProject(req, res) {
   } catch (error) {
     console.log(error);
   }
-}
+},
 
-export async function createProject(req, res) {
+createProject: async function (req, res) {
   const { name, description, date, github, deploy, photo } = req.body;
   try {
     let newProject = await Project.create(
@@ -75,9 +75,9 @@ export async function createProject(req, res) {
       data: {},
     });
   }
-}
+},
 
-export async function updateProject(req, res) {
+updateProject:async function (req, res) {
   const { id } = req.params;
   const { name, description, date, github, deploy, photo } = req.body;
   try {
@@ -120,4 +120,5 @@ export async function updateProject(req, res) {
       data: {},
     });
   }
+}
 }
