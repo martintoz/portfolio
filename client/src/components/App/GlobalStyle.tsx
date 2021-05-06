@@ -5,6 +5,9 @@ export const blackMain = "#151515";
 export const redLight = "#ff616f";
 export const redMain = "#ff1744";
 export const redDark = "#c4001d";
+export const yellowLight = "#EBD281";
+export const blueLight = "#5E70EB";
+export const greenLight = "#52EB76";
 
 export const GlobalStyle = createGlobalStyle`
 body, *{
