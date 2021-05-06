@@ -57,9 +57,10 @@ export const AboutMe = () => {
           </ul>
         </div>
         <a
-          href="./MartinTozer_Resume_FE.pdf"
+          href="https://github.com/martintoz/portfolio/files/6435093/MartinTozer_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
+          download
         >
           <button>Download Resume</button>
         </a>
