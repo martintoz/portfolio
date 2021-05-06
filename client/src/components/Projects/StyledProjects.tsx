@@ -4,7 +4,7 @@ import { whiteMain } from "../App/GlobalStyle";
 export const StyledProjects = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 3vw;
+  padding: 3vw;
   .projectsContainer {
     min-height: 40vh;
     display: flex;

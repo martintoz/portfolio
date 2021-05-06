@@ -96,6 +96,8 @@ export const StyledLanding = styled.div`
     }
   }
   .index {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards 2s;
     display: flex;
     flex-direction: column;
     li {
@@ -124,7 +126,7 @@ export const StyledLanding = styled.div`
     .landingName {
       #logoMT {
         width: 90vw;
-        margin-bottom:-5vh;
+        margin-bottom: -5vh;
       }
     }
   }
