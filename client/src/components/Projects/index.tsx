@@ -37,7 +37,7 @@ export const Projects = () => {
           initialState.map((e) => {
             let newDescription:any
             if(e.description.includes("http")){
-              const re = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/g
+              const re = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_.~#?&//=]*)/g
               const links = [...e.description.matchAll(re)]
               newDescription = links[0].input
               links.forEach(e =>{ 
