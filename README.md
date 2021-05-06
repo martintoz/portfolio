@@ -1,4 +1,4 @@
-# Hi, I'm Martin 👋
+# Hi, I'm Martín 👋
 
 🚀 A __frontend developer__, [soyHenry.com](https://www.soyhenry.com/) graduate with more than 800 training hours, passionate about design and travelling.<br>
 My skills include __JavaScript__, __Apollo GraphQL__, __TypeScript__, __React__, __Redux__, __CSS__, __HTML__, __Node.js__, __Git__, __Express__, __Sequelize__, __PostgreSQL__, __Adobe Photoshop__, __Adobe Illustrator__, __Adobe InDesign__, __Adobe After Effects__, and __Adobe Premiere Pro__.<br>
