@@ -60,7 +60,6 @@ export const AboutMe = () => {
           href="./MartinTozer_Resume_FE.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          download
         >
           <button>Download Resume</button>
         </a>
