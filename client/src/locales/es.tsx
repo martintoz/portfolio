@@ -1,5 +1,5 @@
 const es = {
-	"job": "Desarrollador Frontend",
+	"job": "Programador Frontend",
 	"aboutMe": "Sobre Mí",
 	"projects": "Proyectos",
 	"graduated": "graduado de",
