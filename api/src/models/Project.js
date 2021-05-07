@@ -11,9 +11,15 @@ const Project = sequelize.define('projects', {
         type: Sequelize.TEXT,
         allowNull: false,
     },
+    name_es: {
+        type: Sequelize.TEXT,
+    },
     description: {
         type: Sequelize.TEXT,
         allowNull: false,
+    },
+    description_es: {
+        type: Sequelize.TEXT,
     },
     date: {
         type: Sequelize.DATE,
