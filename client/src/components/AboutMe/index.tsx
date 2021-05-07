@@ -1,4 +1,5 @@
 import { StyledAboutMe } from "./StyledAboutMe";
+import { T } from "../T";
 
 const skills = [
   "JavaScript",
@@ -26,10 +27,11 @@ export const AboutMe = () => {
   return (
     <StyledAboutMe id="aboutMe">
       <div className="parallax">
-        <h2>About me</h2>
+        <h2><T>aboutMe</T></h2>
         <ul className="bio">
           <li>
-            🚀 Frontend Developer,{" "}
+            🚀 <T>job</T>,{" "}
+            <T>graduated</T>{" "}
             <a
               href="https://soyhenry.com/"
               target="_blank"
@@ -37,19 +39,17 @@ export const AboutMe = () => {
             >
               soyHenry.com
             </a>{" "}
-            graduate with more than 800 training hours.
+            <T>bio1</T>
           </li>
           <li>
-            📖 Bilingual in Spanish and English. Graduated from UADE with a
-            bachelor's degree in Advertising.
+            📖 <T>bio2</T>
           </li>
           <li>
-            💻 9 years of work experience in web design and online
-            communication. Freelance translator for 10 years.
+            💻 <T>bio3</T>
           </li>
         </ul>
         <div className="skills">
-          <h3>Skills</h3>
+          <h3><T>skills</T></h3>
           <ul>
             {skills.map((e, i) => (
               <li key={i}>{e}</li>
@@ -62,7 +62,7 @@ export const AboutMe = () => {
           rel="noopener noreferrer"
           download
         >
-          <button>Download Resume</button>
+          <button><T>downloadResume</T></button>
         </a>
       </div>
     </StyledAboutMe>

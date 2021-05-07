@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Parser from "html-react-parser";
 import { StyledProjects } from "./StyledProjects";
 import { Loader } from "../Loader";
 import axios from "axios";
+import { LanguageContext } from "../LanguageProvider";
+import { T } from "../T";
 
 export const Projects = () => {
   interface ProjectData {
@@ -29,9 +31,11 @@ export const Projects = () => {
       });
   }, []);
 
+  const {language} = useContext(LanguageContext)
+  console.log(language)
   return (
     <StyledProjects id="projects">
-      <h2>Projects</h2>
+      <h2><T>projects</T></h2>
       <div className="projectsContainer">
         <ul>
           {initialState.length < 1 && <Loader />}
@@ -60,7 +64,7 @@ export const Projects = () => {
               return (
                 <li key={e.id}>
                   <div className="projectText">
-                    <h3>{e.name}</h3>
+                    <h3>{language === "en" ? e.name : "NOMBRE"}</h3>
                     <div className="projectDescription">
                       {newDescription && newDescription.length
                         ? Parser(newDescription)
