@@ -7,7 +7,6 @@ export const StyledLanding = styled.div`
   align-items: center;
   justify-content: space-around;
   min-height: 100vh;
-
   .landingName {
     display: flex;
     flex-direction: column;

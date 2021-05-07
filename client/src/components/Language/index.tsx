@@ -10,10 +10,9 @@ export const Language = () => {
 
   return (
     <StyledLanguage>
-      <select value={language} onChange={handleUpdateLanguage}>
-        <option value="en">English</option>
-        <option value="es">Spanish</option>
-      </select>
+      <button value="en" onClick={handleUpdateLanguage}>ENG</button>
+      |
+      <button onClick={handleUpdateLanguage} value="es">ESP</button>
     </StyledLanguage>
   );
 };
