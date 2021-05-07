@@ -47,19 +47,21 @@ deleteProject: async function (req, res) {
 },
 
 createProject: async function (req, res) {
-  const { name, description, date, github, deploy, photo } = req.body;
+  const { name, name_es, description, description_es, date, github, deploy, photo } = req.body;
   try {
     let newProject = await Project.create(
       {
         name,
+        name_es,
         description,
+        description_es,
         date,
         github,
         deploy,
         photo,
       },
       {
-        fields: ["name", "description", "date", "github", "deploy", "photo"],
+        fields: ["name","name_es", "description","description_es", "date", "github", "deploy", "photo"],
       }
     );
     if (newProject) {
@@ -79,13 +81,15 @@ createProject: async function (req, res) {
 
 updateProject:async function (req, res) {
   const { id } = req.params;
-  const { name, description, date, github, deploy, photo } = req.body;
+  const {name, name_es, description, description_es, date, github, deploy, photo } = req.body;
   try {
     const projects = await Project.findAll({
       attributes: [
         "id",
         "name",
+        "name_es",
         "description",
+        "description_es",
         "date",
         "github",
         "deploy",
@@ -100,7 +104,9 @@ updateProject:async function (req, res) {
       projects.forEach(async (project) => {
         await project.update({
           name,
+          name_es,
           description,
+          description_es,
           date,
           github,
           deploy,
