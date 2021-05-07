@@ -1,6 +1,6 @@
 const es = {
 	"job": "Programador Frontend",
-	"aboutMe": "Sobre Mí",
+	"aboutMe": "Sobre mí",
 	"projects": "Proyectos",
 	"graduated": "graduado de",
 	"bio1": "con más de 800 horas de cursado.",

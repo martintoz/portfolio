@@ -99,6 +99,9 @@ export const StyledLanding = styled.div`
     animation: fadeIn 1.5s forwards 2s;
     display: flex;
     flex-direction: column;
+    h2{
+      text-transform:capitalize;
+    }
     li {
       padding-left: 0;
       text-align: center;

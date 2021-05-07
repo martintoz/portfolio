@@ -2,7 +2,7 @@
 
 const en = {
 	"job": "Frontend Developer",
-	"aboutMe": "About Me",
+	"aboutMe": "About me",
 	"projects": "Projects",
 	"graduated": "graduated from",
 	"bio1": `with more than 800 training hours.`,
