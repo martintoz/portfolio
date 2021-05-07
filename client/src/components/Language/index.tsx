@@ -11,6 +11,7 @@ export const Language = () => {
   return (
     <StyledLanguage>
       <button value="en" onClick={handleUpdateLanguage}>ENG</button>
+      |
       <button onClick={handleUpdateLanguage} value="es">ESP</button>
     </StyledLanguage>
   );
