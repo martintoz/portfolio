@@ -1,5 +1,7 @@
 import { StyledAboutMe } from "./StyledAboutMe";
 import { T } from "../T";
+import { useContext } from "react";
+import { LanguageContext } from "../LanguageProvider";
 
 const skills = [
   "JavaScript",
@@ -24,14 +26,18 @@ const skills = [
   "Adobe Premiere Pro",
 ];
 export const AboutMe = () => {
+  const { language } = useContext(LanguageContext);
+  const cvEn = "https://github.com/martintoz/portfolio/files/6435093/MartinTozer_Resume.pdf"
+  const cvEs = "https://github.com/martintoz/portfolio/files/6444319/MartinTozer_CV.pdf"
   return (
     <StyledAboutMe id="aboutMe">
       <div className="parallax">
-        <h2><T>aboutMe</T></h2>
+        <h2>
+          <T>aboutMe</T>
+        </h2>
         <ul className="bio">
           <li>
-            🚀 <T>job</T>,{" "}
-            <T>graduated</T>{" "}
+            🚀 <T>job</T>, <T>graduated</T>{" "}
             <a
               href="https://soyhenry.com/"
               target="_blank"
@@ -49,7 +55,9 @@ export const AboutMe = () => {
           </li>
         </ul>
         <div className="skills">
-          <h3><T>skills</T></h3>
+          <h3>
+            <T>skills</T>
+          </h3>
           <ul>
             {skills.map((e, i) => (
               <li key={i}>{e}</li>
@@ -57,12 +65,15 @@ export const AboutMe = () => {
           </ul>
         </div>
         <a
-          href="https://github.com/martintoz/portfolio/files/6435093/MartinTozer_Resume.pdf"
+          href={language === "en" ? cvEn : cvEs
+          }
           target="_blank"
           rel="noopener noreferrer"
           download
         >
-          <button><T>downloadResume</T></button>
+          <button>
+            <T>downloadResume</T>
+          </button>
         </a>
       </div>
     </StyledAboutMe>

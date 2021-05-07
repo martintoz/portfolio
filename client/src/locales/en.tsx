@@ -11,6 +11,6 @@ const en = {
 	"bio3":`9 years of work experience in web design and online
 	communication. Freelance translator for 10 years.`,
 	"skills":"Skills",
-	"downloadResume": "Download Resume",
+	"downloadResume": "Download Resume"
 }
 export default en

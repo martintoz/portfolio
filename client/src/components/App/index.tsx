@@ -3,21 +3,14 @@ import { GlobalStyle } from "./GlobalStyle";
 import { Landing } from "../Landing";
 import { AboutMe } from "../AboutMe";
 import { Footer } from "../Footer";
-import { useContext } from "react";
-import { LanguageContext } from "../LanguageProvider";
+import { Language } from "../Language";
 
 function App() {
-  const { language, updateLanguage } = useContext(LanguageContext);
-  const handleUpdateLanguage = ({ target: { value } }: any) => {
-    updateLanguage(value);
-  };
+  
   return (
     <div className="App" id="App">
-      <select value={language} onChange={handleUpdateLanguage}>
-        <option value="en">English</option>
-        <option value="es">Spanish</option>
-      </select>
       <GlobalStyle />
+      <Language />
       <Landing />
       <AboutMe />
       <Projects />
