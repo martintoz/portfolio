@@ -5,6 +5,7 @@ import { Loader } from "../Loader";
 import axios from "axios";
 import { LanguageContext } from "../LanguageProvider";
 import { T } from "../T";
+import { stringToLink, urlRegex } from "../../utils";
 
 export const Projects = () => {
   interface ProjectData {
@@ -45,42 +46,22 @@ export const Projects = () => {
           {initialState.length < 1 && <Loader />}
           {initialState.length > 0 &&
             initialState.map((e) => {
-              let newDescription: any;
-              let newDescription_es: any;
+              let newDescription: string;
+              let newDescription_es: string;
               if (e.description.includes("http")) {
-                const re = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_.~#?&//=]*)/g;
-                const links = [...e.description.matchAll(re)];
-                const links_es = [...e.description_es.matchAll(re)];
-                newDescription = links[0].input;
-                newDescription_es = links_es[0].input;
+                const links = [...e.description.matchAll(urlRegex)];
+                const links_es = [...e.description_es.matchAll(urlRegex)];
+                newDescription = links[0].input!;
+                newDescription_es = links_es[0].input!;
+                
                 links.forEach((e) => {
-                  let link = e[0];
-                  let siteName = link.split("//")[1];
-                  newDescription = newDescription.replace(
-                    link,
-                    `<a
-                  href=${link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                > 
-                  ${siteName}
-                </a>`
-                  );
+                  newDescription = stringToLink(e, newDescription);
                 });
                 links_es.forEach((e) => {
-                  let link = e[0];
-                  let siteName = link.split("//")[1];
-                  newDescription_es = newDescription_es.replace(
-                    link,
-                    `<a
-                  href=${link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                > 
-                  ${siteName}
-                </a>`
-                  );
-                });
+                  newDescription_es = stringToLink(e, newDescription_es);
+                }
+                );
+                
               }
               return (
                 <li key={e.id}>
@@ -88,10 +69,10 @@ export const Projects = () => {
                     <h3>{language === "en" ? e.name : e.name_es || e.name}</h3>
                     <div className="projectDescription">
                       {language === "en"
-                        ? newDescription && newDescription.length
+                        ? newDescription! && newDescription.length
                           ? Parser(newDescription)
                           : e.description
-                        : newDescription_es && newDescription_es.length
+                        : newDescription_es! && newDescription_es.length
                         ? Parser(newDescription_es):e.description_es || e.description}
                     </div>
                     <div className="links">
