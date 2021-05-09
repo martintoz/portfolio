@@ -8,7 +8,7 @@ export const LanguageContext = createContext({
 
 export const LanguageProvider = ({ children, fetchTranslations }:any) => {
 	const [{ language, strings }, setLanguage] = useState({
-		language: "en",
+		language: navigator.language.slice(0, 2) === "es" ? "es":"en",
 		strings: {}
 	})
 	const initialStringsLoaded = useRef(false)
