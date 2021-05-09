@@ -22,6 +22,7 @@ export const StyledLanding = styled.div`
     }
     #logoMT {
       animation: fill 0.5s ease forwards 2s;
+
       width: 70vw;
 
       path:nth-child(1) {
@@ -99,8 +100,8 @@ export const StyledLanding = styled.div`
     animation: fadeIn 1.5s forwards 2s;
     display: flex;
     flex-direction: column;
-    h2{
-      text-transform:capitalize;
+    h2 {
+      text-transform: capitalize;
     }
     li {
       padding-left: 0;
