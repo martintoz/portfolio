@@ -57,15 +57,17 @@ body{
   }
 }
 @media (max-width: 858px){
+  body{
   h1{
     font-size:1.75em;
   }
   h2{
     font-size:1.25em;
+    padding-bottom:0;
     margin:3vh 0;
   }
   h3{
     font-size:1em;
-  }
+  }}
 }
 `;
