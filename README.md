@@ -14,5 +14,5 @@ Want to see my work? [Check out my portfolio](https://tozer.ar)
 
 ### 📫 How to reach me:
 [<img src="https://edent.github.io/SuperTinyIcons/images/svg/linkedin.svg" width="25" title="LinkedIn" />](https://www.linkedin.com/in/martintoz/)
-[<img src="https://edent.github.io/SuperTinyIcons/images/svg/gmail.svg" width="25" title="Gmail" />](mailto:martintoz@gmail.com)
+[<img src="https://edent.github.io/SuperTinyIcons/images/svg/gmail.svg" width="25" title="Gmail" />](mailto:martin@tozer.ar)
 [<img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Globe_icon_squared.svg" width="25" title="Portfolio" />](https://tozer.ar)
