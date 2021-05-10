@@ -24,7 +24,7 @@ export const Social = () => {
           </a>
         </li>
         <li>
-          <a href="mailto:martintoz@gmail.com" rel="noopener noreferrer" target="_blank">
+          <a href="mailto:martin@tozer.ar" rel="noopener noreferrer" target="_blank">
             <i className="fas fa-envelope"></i>
           </a>
         </li>
