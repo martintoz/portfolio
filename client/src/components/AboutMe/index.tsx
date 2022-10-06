@@ -5,25 +5,25 @@ import { LanguageContext } from "../LanguageProvider";
 
 const skills = [
   "JavaScript",
-  "CSS / Sass",
-  "React",
-  "Redux",
   "TypeScript",
-  "Apollo GraphQL",
+  "React",
+  "Angular",
+  "CSS / Sass",
+  "Redux / NgRx",
+  "Jest",
   "Node.js",
   "Git",
+  "Apollo GraphQL",
   "HTML",
   "Express",
   "Sequelize",
   "PostgreSQL",
-  "Next.js",
   "Figma",
   "Adobe XD",
   "Adobe Photoshop",
   "Adobe Illustrator",
   "Adobe InDesign",
   "Adobe After Effects",
-  "Adobe Premiere Pro",
 ];
 export const AboutMe = () => {
   const { language } = useContext(LanguageContext);
