@@ -27,8 +27,8 @@ const skills = [
 ];
 export const AboutMe = () => {
   const { language } = useContext(LanguageContext);
-  const cvEn = "https://github.com/martintoz/portfolio/files/9402741/MartinTozer_Resume.pdf"
-  const cvEs = "https://github.com/martintoz/portfolio/files/9402738/MartinTozer_CV.pdf"
+  const cvEn = "https://github.com/martintoz/portfolio/files/10468316/MartinTozer_Resume_AR.pdf"
+  const cvEs = "https://github.com/martintoz/portfolio/files/10468315/MartinTozer_CV_AR.pdf"
   return (
     <StyledAboutMe id="aboutMe">
       <div className="parallax">
