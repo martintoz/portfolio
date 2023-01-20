@@ -1,11 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
-import Parser from "html-react-parser";
-import { StyledProjects } from "./StyledProjects";
-import { Loader } from "../Loader";
 import axios from "axios";
-import { LanguageContext } from "../LanguageProvider";
-import { T } from "../T";
+import Parser from "html-react-parser";
+import { useContext, useEffect, useState } from "react";
 import { stringToLink, urlRegex } from "../../utils";
+import { LanguageContext } from "../LanguageProvider";
+import { Loader } from "../Loader";
+import { T } from "../T";
+import { StyledProjects } from "./StyledProjects";
 
 export const Projects = () => {
   interface ProjectData {
@@ -23,14 +23,14 @@ export const Projects = () => {
 
   useEffect(() => {
     axios
-      .get("/api/projects")
+      .get("https://portfolio-835c7-default-rtdb.firebaseio.com/projects.json")
       .then((res) => {
         if (res) {
           return res;
         }
       })
       .then((jsonResponse) => {
-        setInitialState(jsonResponse!.data.data);
+        setInitialState(jsonResponse!.data);
       });
   }, []);
 
