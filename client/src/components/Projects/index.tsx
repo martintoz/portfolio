@@ -23,7 +23,7 @@ export const Projects = () => {
 
   useEffect(() => {
     axios
-      .get("https://portfolio-835c7-default-rtdb.firebaseio.com/projects.json")
+      .get(`https://portfolio-835c7-default-rtdb.firebaseio.com/projects.json?auth=${process.env.FIREBASE_AUTH_SECRET}`)
       .then((res) => {
         if (res) {
           return res;
