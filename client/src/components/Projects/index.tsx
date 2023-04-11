@@ -20,10 +20,10 @@ export const Projects = () => {
     photo: string;
   }
   const [initialState, setInitialState] = useState<ProjectData[]>([]);
-
+  const firebaseAuth = process.env.REACT_APP_FIREBASE_SECRET
   useEffect(() => {
     axios
-      .get(`https://portfolio-835c7-default-rtdb.firebaseio.com/projects.json?auth=${process.env.FIREBASE_AUTH_SECRET}`)
+      .get(`https://portfolio-835c7-default-rtdb.firebaseio.com/projects.json?auth=${firebaseAuth}`)
       .then((res) => {
         if (res) {
           return res;
@@ -32,7 +32,7 @@ export const Projects = () => {
       .then((jsonResponse) => {
         setInitialState(jsonResponse!.data);
       });
-  }, []);
+  }, [firebaseAuth]);
 
   const { language } = useContext(LanguageContext);
 
